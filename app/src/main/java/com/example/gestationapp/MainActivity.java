@@ -2,6 +2,7 @@ package com.example.gestationapp;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -11,6 +12,7 @@ public class MainActivity extends AppCompatActivity {
 
     Button firstButton;
     TextView fartText;
+    Button firstToSec;
 
 
     @Override
@@ -22,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
 
         fartText = (TextView) findViewById(R.id.textView);
 
-
+        firstToSec = (Button) findViewById(R.id.nextLayout);
 
 
 
@@ -38,7 +40,13 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-
+        firstButton.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick (View view){
+                Intent newIntent = new Intent(MainActivity.this, secondPage.class);
+                startActivity(newIntent);
+            }
+        });
 
 
     }
