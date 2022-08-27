@@ -32,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
                     public void onClick (View view){
                 if(!fartText.getText().toString().equals("Button was clicked"))
                 fartText.setText("Button was clicked");
-                else{fartText.setText("Hello Bart");
+                else{fartText.setText("Hello Barty");
                 }
 
             }
