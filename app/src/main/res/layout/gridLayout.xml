@@ -5,7 +5,8 @@
     android:layout_height="match_parent"
     android:rowCount="4"
     android:columnCount="2"
-    android:background="#3F51B5">
+    android:background="#3F51B5"
+    >
 
     <ImageView
         android:layout_height="90dp"
