@@ -22,7 +22,10 @@
 
 
         <activity android:name=".secondPage"/>
-        <activity android:name=".gridActivity"/>
+        <activity android:name=".scrollPage"/>
+        <activity android:name=".framePage"/>
+        <activity android:name=".actualGridPage"/>
+
     </application>
 
 

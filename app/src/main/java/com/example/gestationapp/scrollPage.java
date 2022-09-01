@@ -7,14 +7,14 @@ import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class gridActivity extends AppCompatActivity {
+public class scrollPage extends AppCompatActivity {
     Button backToFirst;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.gridLayout);
+        setContentView(R.layout.scroll_layout);
 
 
         backToFirst = (Button) findViewById(R.id.backButton);
@@ -22,7 +22,7 @@ public class gridActivity extends AppCompatActivity {
        backToFirst.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent newIntent = new Intent(gridActivity.this, MainActivity.class );
+                Intent newIntent = new Intent(scrollPage.this, MainActivity.class );
                 startActivity(newIntent);
             }
         });

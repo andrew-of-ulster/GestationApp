@@ -10,7 +10,7 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
-    Button firstButton,firstToSec,toGrid;
+    Button firstButton,firstToSec,toScroll, toFrame, toGrid;
     TextView welcome;;
 
 
@@ -20,15 +20,13 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        firstButton = (Button) findViewById(R.id.BUTTON);
-
         welcome = (TextView) findViewById(R.id.textView);
 
+        firstButton = (Button) findViewById(R.id.BUTTON);
         firstToSec = (Button) findViewById(R.id.nextLayout);
-
+        toScroll = (Button) findViewById(R.id.toScrollButton);
+        toFrame = (Button) findViewById(R.id.toFrameButton);
         toGrid = (Button) findViewById(R.id.toGridButton);
-
-
 
 
         firstButton.setOnClickListener(new View.OnClickListener(){
@@ -50,13 +48,31 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        toGrid.setOnClickListener(new View.OnClickListener(){
+        toScroll.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick (View view){
-                Intent newIntent = new Intent(MainActivity.this, gridActivity.class);
+                Intent newIntent = new Intent(MainActivity.this, scrollPage.class);
                 startActivity(newIntent);
             }
         });
+
+        toFrame.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick (View view){
+                Intent newIntent = new Intent(MainActivity.this, framePage.class);
+                startActivity(newIntent);
+            }
+        });
+
+        toGrid.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick (View view){
+                Intent newIntent = new Intent(MainActivity.this, actualGridPage.class);
+                startActivity(newIntent);
+            }
+        });
+
+
 
 
     }
