@@ -11,7 +11,7 @@ import android.widget.TextView;
 public class MainActivity extends AppCompatActivity {
 
     Button firstButton;
-    TextView fartText;
+    TextView welcome;
     Button firstToSec;
 
 
@@ -23,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
 
         firstButton = (Button) findViewById(R.id.BUTTON);
 
-        fartText = (TextView) findViewById(R.id.textView);
+        welcome = (TextView) findViewById(R.id.textView);
 
         firstToSec = (Button) findViewById(R.id.nextLayout);
 
@@ -33,15 +33,15 @@ public class MainActivity extends AppCompatActivity {
         firstButton.setOnClickListener(new View.OnClickListener(){
             @Override
                     public void onClick (View view){
-                if(!fartText.getText().toString().equals("Button was clicked"))
-                fartText.setText("Button was clicked");
-                else{fartText.setText("Hello Barty");
+                if(!welcome.getText().toString().equals("Button was clicked"))
+                welcome.setText("Button was clicked");
+                else{welcome.setText("Hello Barty");
                 }
 
             }
         });
 
-        firstButton.setOnClickListener(new View.OnClickListener(){
+        firstToSec.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick (View view){
                 Intent newIntent = new Intent(MainActivity.this, secondPage.class);
