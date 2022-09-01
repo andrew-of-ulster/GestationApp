@@ -10,6 +10,9 @@ import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 
 import java.text.SimpleDateFormat;
+import java.time.LocalDate;
+import java.util.Calendar;
+import java.util.Date;
 
 public class datePage extends AppCompatActivity {
     Button backToFirst;
@@ -39,8 +42,18 @@ public class datePage extends AppCompatActivity {
 
             @Override
             public void onSelectedDayChange( CalendarView view, int year, int month, int dayOfMonth) {
-                String curDate = dayOfMonth + "/" + ++month + "/" + year;
-                op.setText(curDate);
+                //long selectedDate = view.
+           // selectedDate += 86400000;
+
+                Date d = new Date(year-1900, month, dayOfMonth);
+
+            Calendar c= Calendar.getInstance();
+            c.setTime(d);
+
+            c.add(Calendar.DATE, 280);
+            Date future = c.getTime();
+               String curDate = dayOfMonth + "/" + ++month + "/" + year;
+                op.setText((""+future));
 
             }
         });
