@@ -5,16 +5,13 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CalendarView;
-import android.widget.DatePicker;
 import android.widget.TextView;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import java.text.SimpleDateFormat;
-import java.util.Date;
 
-public class secondPage extends AppCompatActivity {
+public class datePage extends AppCompatActivity {
     Button backToFirst;
     TextView op;
     CalendarView calenderClick;
@@ -55,7 +52,7 @@ public class secondPage extends AppCompatActivity {
        backToFirst.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent newIntent = new Intent(secondPage.this, MainActivity.class );
+                Intent newIntent = new Intent(datePage.this, MainActivity.class );
                 startActivity(newIntent);
             }
         });

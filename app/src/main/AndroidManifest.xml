@@ -21,7 +21,7 @@
         </activity>
 
 
-        <activity android:name=".secondPage"/>
+        <activity android:name=".datePage"/>
         <activity android:name=".scrollPage"/>
         <activity android:name=".framePage"/>
         <activity android:name=".actualGridPage"/>
