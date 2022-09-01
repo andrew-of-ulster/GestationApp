@@ -4,72 +4,105 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background = "#228B22"
+    android:background = "#F8B195"
     tools:context=".MainActivity">
 
+
+
+<LinearLayout
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintLeft_toLeftOf="parent"
+    app:layout_constraintRight_toRightOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    android:gravity="center"
+
+
+    >
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Welcome"
         android:textColor="#ffffff"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-<LinearLayout
-    android:orientation="vertical"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    app:layout_constraintBottom_toBottomOf="parent"
-    app:layout_constraintLeft_toLeftOf="parent"
-    app:layout_constraintRight_toRightOf="parent"
-    app:layout_constraintTop_toTopOf="@+id/textView"
-    >
-    <Button
-        android:id="@+id/BUTTON"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="BUTTON"
-        android:textColor="@android:color/black"
-
+        android:layout_gravity="center"
+        android:layout_marginBottom="30dp"
+        android:background = "#F67280"
         />
 
-    <Button
-        android:background="@android:color/white"
-        android:id="@+id/nextLayout"
+    <LinearLayout
+        android:orientation="horizontal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Next Layout"
-        android:textColor="@android:color/black"
+        android:layout_marginBottom="10dp"
+        android:background = "#F67280">
 
-
-        />
-
-    <Button
-        android:id="@+id/toScrollButton"
+    <LinearLayout
+        android:orientation="vertical"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@android:color/white"
-        android:text="To Scroll"
-        android:textColor="@android:color/black"
-        />
-    <Button
-        android:id="@+id/toFrameButton"
+        android:layout_marginBottom="10dp"
+
+        >
+        <Button
+            android:background="@android:color/white"
+            android:id="@+id/nextLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="To Date"
+            android:layout_marginBottom="20dp"/>
+
+        <Button
+            android:id="@+id/toFrameButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:color/white"
+            android:text="To Frame"
+            android:layout_marginRight="20dp"
+            />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@android:color/white"
-        android:text="To Frame"
-        android:textColor="@android:color/black"
-        />
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="40dp"
+        >
+
     <Button
         android:id="@+id/toGridButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@android:color/white"
         android:text="To Grid"
-        android:textColor="@android:color/black"
+        android:layout_marginBottom="20dp"
+        />
+
+        <Button
+            android:id="@+id/toScrollButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:color/white"
+            android:text="To Scroll"
+            />
+
+    </LinearLayout>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/BUTTON"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:text="Click For A Surprise"
+
+
         />
 
 </LinearLayout>
