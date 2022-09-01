@@ -10,9 +10,8 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
-    Button firstButton;
-    TextView welcome;
-    Button firstToSec;
+    Button firstButton,firstToSec,toGrid;
+    TextView welcome;;
 
 
 
@@ -26,6 +25,8 @@ public class MainActivity extends AppCompatActivity {
         welcome = (TextView) findViewById(R.id.textView);
 
         firstToSec = (Button) findViewById(R.id.nextLayout);
+
+        toGrid = (Button) findViewById(R.id.toGridButton);
 
 
 
@@ -49,6 +50,13 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        toGrid.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick (View view){
+                Intent newIntent = new Intent(MainActivity.this, gridActivity.class);
+                startActivity(newIntent);
+            }
+        });
 
 
     }
