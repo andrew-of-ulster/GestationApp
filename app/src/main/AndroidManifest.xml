@@ -25,6 +25,7 @@
         <activity android:name=".scrollPage"/>
         <activity android:name=".framePage"/>
         <activity android:name=".actualGridPage"/>
+        <activity android:name=".notiPage"/>
 
     </application>
 

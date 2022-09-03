@@ -15,23 +15,18 @@ import java.util.Calendar;
 import java.util.Date;
 
 public class datePage extends AppCompatActivity {
-    Button backToFirst;
+    Button backToFirst, getDate;
     TextView op;
-    CalendarView calenderClick;
-    Button getDate;
-
-
-
-
+    CalendarView simpleCalendarView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.secondpage);
+        setContentView(R.layout.date_layout);
 
         backToFirst = (Button) findViewById(R.id.backButton);
-        CalendarView simpleCalendarView = (CalendarView) findViewById(R.id.calendarView);
         getDate = (Button) findViewById(R.id.getDate);
+        simpleCalendarView = (CalendarView) findViewById(R.id.calendarView);
         op = (TextView) findViewById(R.id.output);
 
 
@@ -58,10 +53,6 @@ public class datePage extends AppCompatActivity {
             }
         });
 
-
-
-
-
        backToFirst.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -69,11 +60,6 @@ public class datePage extends AppCompatActivity {
                 startActivity(newIntent);
             }
         });
-
-
-
-
-
 
     }
 

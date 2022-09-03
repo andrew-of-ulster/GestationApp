@@ -37,7 +37,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="10dp"
-        android:background = "#F67280">
+        android:background = "#F67280"
+        android:padding="20dp">
 
     <LinearLayout
         android:orientation="vertical"
@@ -61,8 +62,17 @@
             android:background="@android:color/white"
             android:text="To Frame"
             android:layout_marginRight="20dp"
+            android:layout_marginBottom="20dp"
             />
 
+        <Button
+            android:id="@+id/toNotiButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:color/white"
+            android:text="To Notification"
+            android:layout_marginRight="20dp"
+            />
 
     </LinearLayout>
 
@@ -72,6 +82,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="10dp"
         android:layout_marginLeft="40dp"
+        android:gravity="right"
         >
 
     <Button

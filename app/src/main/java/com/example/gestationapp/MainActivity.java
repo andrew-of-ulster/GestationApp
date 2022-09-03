@@ -10,8 +10,8 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
-    Button firstButton,firstToSec,toScroll, toFrame, toGrid;
-    TextView welcome;;
+    Button firstButton,toDateBut,toScrollBut, toFrameBut, toGridBut, toNotiBut;
+    TextView welcome;
 
 
 
@@ -23,10 +23,11 @@ public class MainActivity extends AppCompatActivity {
         welcome = (TextView) findViewById(R.id.textView);
 
         firstButton = (Button) findViewById(R.id.BUTTON);
-        firstToSec = (Button) findViewById(R.id.nextLayout);
-        toScroll = (Button) findViewById(R.id.toScrollButton);
-        toFrame = (Button) findViewById(R.id.toFrameButton);
-        toGrid = (Button) findViewById(R.id.toGridButton);
+        toDateBut = (Button) findViewById(R.id.nextLayout);
+        toScrollBut = (Button) findViewById(R.id.toScrollButton);
+        toFrameBut = (Button) findViewById(R.id.toFrameButton);
+        toGridBut = (Button) findViewById(R.id.toGridButton);
+        toNotiBut = (Button) findViewById(R.id.toNotiButton);
 
 
         firstButton.setOnClickListener(new View.OnClickListener(){
@@ -40,7 +41,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        firstToSec.setOnClickListener(new View.OnClickListener(){
+        toDateBut.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick (View view){
                 Intent newIntent = new Intent(MainActivity.this, datePage.class);
@@ -48,7 +49,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        toScroll.setOnClickListener(new View.OnClickListener(){
+        toScrollBut.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick (View view){
                 Intent newIntent = new Intent(MainActivity.this, scrollPage.class);
@@ -56,7 +57,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        toFrame.setOnClickListener(new View.OnClickListener(){
+        toFrameBut.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick (View view){
                 Intent newIntent = new Intent(MainActivity.this, framePage.class);
@@ -64,10 +65,18 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        toGrid.setOnClickListener(new View.OnClickListener(){
+        toGridBut.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick (View view){
                 Intent newIntent = new Intent(MainActivity.this, actualGridPage.class);
+                startActivity(newIntent);
+            }
+        });
+
+        toNotiBut.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick (View view){
+                Intent newIntent = new Intent(MainActivity.this, notiPage.class);
                 startActivity(newIntent);
             }
         });

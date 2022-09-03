@@ -10,7 +10,7 @@ public class actualGridPage extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.actual_grid_layout);
+        setContentView(R.layout.grid_layout);
 
     }
 
