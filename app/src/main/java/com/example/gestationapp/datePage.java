@@ -35,20 +35,9 @@ public class datePage extends AppCompatActivity {
 
             @Override
             public void onSelectedDayChange( CalendarView view, int year, int month, int dayOfMonth) {
-
-
-                Date d = new Date(year-1900, month, dayOfMonth);
-
-            Calendar c= Calendar.getInstance();
-            c.setTime(d);
-
-            c.add(Calendar.DATE, 280);
-            c.add(Calendar.MONTH,1);
-            c.add(Calendar.YEAR, 1900);
-            Date future = c.getTime();
-
-               op.setText((future.getDate() + "/" + future.getMonth() + "/" + future.getYear()));
-
+                int days = 280;
+                Date future = getFutureDate(year, month, dayOfMonth, days);
+                op.setText((future.getDate() + "/" + future.getMonth() + "/" + future.getYear()));
             }
         });
 
@@ -60,6 +49,18 @@ public class datePage extends AppCompatActivity {
             }
         });
 
+    }
+
+    public Date getFutureDate(int year, int month, int dayOfMonth, int days) {
+        Date d = new Date(year-1900, month, dayOfMonth);
+        Calendar c= Calendar.getInstance();
+        c.setTime(d);
+
+        c.add(Calendar.DATE, days);
+        c.add(Calendar.MONTH,1);
+        c.add(Calendar.YEAR, 1900);
+        Date future = c.getTime();
+        return future;
     }
 
 }

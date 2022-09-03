@@ -18,6 +18,7 @@ public class MainActivity extends AppCompatActivity {
     ActivityMainBinding binding;
 
     Button firstButton,toDateBut,toScrollBut, toFrameBut, toGridBut, toNotiBut;
+    Button firstButton,toDateBut,toScrollBut, toFrameBut, toGridBut, toNotiBut, toCowListBut;
     TextView welcome;
 
 
@@ -36,6 +37,7 @@ public class MainActivity extends AppCompatActivity {
         toFrameBut = (Button) findViewById(R.id.toFrameButton);
         toGridBut = (Button) findViewById(R.id.toGridButton);
         toNotiBut = (Button) findViewById(R.id.toNotiButton);
+        toCowListBut = (Button) findViewById(R.id.toCowListButton);
 
 
         firstButton.setOnClickListener(new View.OnClickListener(){
@@ -85,6 +87,14 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick (View view){
                 Intent newIntent = new Intent(MainActivity.this, notiPage.class);
+                startActivity(newIntent);
+            }
+        });
+
+        toCowListBut.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick (View view){
+                Intent newIntent = new Intent(MainActivity.this, CowListActivity.class);
                 startActivity(newIntent);
             }
         });
