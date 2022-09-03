@@ -45,10 +45,14 @@ public class datePage extends AppCompatActivity {
             Calendar c= Calendar.getInstance();
             c.setTime(d);
 
-            c.add(Calendar.DATE, 280);
+            c.add(Calendar.DATE, 1);
+            c.add(Calendar.MONTH,1);
+            c.add(Calendar.YEAR, 1900);
             Date future = c.getTime();
                String curDate = dayOfMonth + "/" + ++month + "/" + year;
-                op.setText((""+future));
+
+
+               op.setText((future.getDate() + "/" + future.getMonth() + "/" + future.getYear()));
 
             }
         });
