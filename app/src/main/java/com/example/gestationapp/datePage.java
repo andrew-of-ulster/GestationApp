@@ -30,27 +30,22 @@ public class datePage extends AppCompatActivity {
         op = (TextView) findViewById(R.id.output);
 
 
-        SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
-
 
         simpleCalendarView.setOnDateChangeListener(new CalendarView.OnDateChangeListener(){
 
             @Override
             public void onSelectedDayChange( CalendarView view, int year, int month, int dayOfMonth) {
-                //long selectedDate = view.
-           // selectedDate += 86400000;
+
 
                 Date d = new Date(year-1900, month, dayOfMonth);
 
             Calendar c= Calendar.getInstance();
             c.setTime(d);
 
-            c.add(Calendar.DATE, 1);
+            c.add(Calendar.DATE, 280);
             c.add(Calendar.MONTH,1);
             c.add(Calendar.YEAR, 1900);
             Date future = c.getTime();
-               String curDate = dayOfMonth + "/" + ++month + "/" + year;
-
 
                op.setText((future.getDate() + "/" + future.getMonth() + "/" + future.getYear()));
 
