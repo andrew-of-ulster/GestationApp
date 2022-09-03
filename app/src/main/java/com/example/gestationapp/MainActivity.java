@@ -17,7 +17,6 @@ public class MainActivity extends AppCompatActivity {
 
     ActivityMainBinding binding;
 
-    Button firstButton,toDateBut,toScrollBut, toFrameBut, toGridBut, toNotiBut;
     Button firstButton,toDateBut,toScrollBut, toFrameBut, toGridBut, toNotiBut, toCowListBut;
     TextView welcome;
 

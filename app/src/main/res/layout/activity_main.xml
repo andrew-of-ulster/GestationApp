@@ -66,18 +66,11 @@
                         android:layout_marginBottom="20dp"
                         android:text="To Date" />
 
-        <Button
-            android:id="@+id/toFrameButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="To Frame"
-            android:layout_marginBottom="20dp"
-            />
+
                     <Button
                         android:id="@+id/toFrameButton"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginRight="20dp"
                         android:layout_marginBottom="20dp"
                         android:text="To Frame" />
 
@@ -87,12 +80,6 @@
             android:layout_height="wrap_content"
             android:text="To Notification"
             />
-                    <Button
-                        android:id="@+id/toNotiButton"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginRight="20dp"
-                        android:text="To Notification" />
 
                 </LinearLayout>
 
@@ -125,11 +112,6 @@
             android:layout_height="wrap_content"
             android:text="To Cow List"
             />
-                    <Button
-                        android:id="@+id/toScrollButton"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="To Scroll" />
 
                 </LinearLayout>
 
