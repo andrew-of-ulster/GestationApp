@@ -4,7 +4,9 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/Matth/AndroidStudioProjects/GestationApp3/app/src/main/res/layout/activity_main.xml" value="0.5" />
+        <entry key="..\:/Users/Matth/AndroidStudioProjects/GestationApp3/app/src/main/res/layout/cow_item.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/Matth/AndroidStudioProjects/GestationApp3/app/src/main/res/layout/cow_list_layout.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Matth/AndroidStudioProjects/GestationApp3/app/src/main/res/layout/date_layout.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/Matth/AndroidStudioProjects/GestationApp3/app/src/main/res/layout/fragment_calendar.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/Matth/AndroidStudioProjects/GestationApp3/app/src/main/res/layout/fragment_home.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/Matth/AndroidStudioProjects/GestationApp3/app/src/main/res/layout/fragment_list.xml" value="0.20416666666666666" />

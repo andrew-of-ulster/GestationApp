@@ -21,13 +21,6 @@
         </activity>
 
 
-        <activity android:name=".datePage"/>
-        <activity android:name=".scrollPage"/>
-        <activity android:name=".framePage"/>
-        <activity android:name=".actualGridPage"/>
-        <activity android:name=".notiPage"/>
-        <activity android:name=".CowListActivity"/>
-
     </application>
 
 
