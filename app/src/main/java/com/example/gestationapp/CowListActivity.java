@@ -15,7 +15,7 @@ public class CowListActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.cow_list_layout);
+        setContentView(R.layout.list_layout);
 
         ArrayList<Cow> cows = new ArrayList<>();
         for(int i=0;i<30;i++){
