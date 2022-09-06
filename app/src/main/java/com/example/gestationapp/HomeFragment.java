@@ -7,6 +7,9 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.TextView;
+import android.widget.Toast;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -53,12 +56,32 @@ public class HomeFragment extends Fragment {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
+
+
+
     }
+
+    View view;
+    Button homeFragBut;
+    TextView changeText;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_home, container, false);
+
+        view = inflater.inflate(R.layout.fragment_home, container, false);
+
+        homeFragBut = (Button) view.findViewById(R.id.homeFragBut);
+        changeText = (TextView) view.findViewById(R.id.homeText);
+        homeFragBut.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick (View view){
+                changeText.setText("Eureka");
+                Toast.makeText(getActivity(), "First Fragment", Toast.LENGTH_LONG).show();
+            }
+        });
+
+        return view;
     }
 }

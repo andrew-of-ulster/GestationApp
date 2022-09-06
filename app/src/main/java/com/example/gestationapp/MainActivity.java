@@ -18,17 +18,20 @@ public class MainActivity extends AppCompatActivity {
     ActivityMainBinding binding;
 
     Button firstButton,toDateBut,toScrollBut, toFrameBut, toGridBut, toNotiBut, toCowListBut;
-    TextView welcome;
+    TextView welcome, changeText;
 
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        replaceFragment(new HomeFragment());
         binding =ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
         welcome = (TextView) findViewById(R.id.textView);
+
 
         firstButton = (Button) findViewById(R.id.BUTTON);
         toDateBut = (Button) findViewById(R.id.nextLayout);
