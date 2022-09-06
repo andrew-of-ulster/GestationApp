@@ -7,6 +7,11 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.CalendarView;
+import android.widget.TextView;
+
+import java.util.Calendar;
+import java.util.Date;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -14,6 +19,11 @@ import android.view.ViewGroup;
  * create an instance of this fragment.
  */
 public class CalendarFragment extends Fragment {
+
+
+    TextView op;
+    CalendarView simpleCalendarView;
+
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -59,6 +69,38 @@ public class CalendarFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_calendar, container, false);
+
+
+        View view = inflater.inflate(R.layout.fragment_calendar, container, false);
+
+        simpleCalendarView = (CalendarView) view.findViewById(R.id.calendarView);
+        op = (TextView) view.findViewById(R.id.output);
+
+
+
+        simpleCalendarView.setOnDateChangeListener(new CalendarView.OnDateChangeListener(){
+
+            @Override
+            public void onSelectedDayChange( CalendarView view, int year, int month, int dayOfMonth) {
+                int days = 280;
+                Date future = getFutureDate(year, month, dayOfMonth, days);
+                op.setText((future.getDate() + "/" + future.getMonth() + "/" + future.getYear()));
+            }
+        });
+    return view;
     }
+
+    public Date getFutureDate(int year, int month, int dayOfMonth, int days) {
+        Date d = new Date(year-1900, month, dayOfMonth);
+        Calendar c= Calendar.getInstance();
+        c.setTime(d);
+
+        c.add(Calendar.DATE, days);
+        c.add(Calendar.MONTH,1);
+        c.add(Calendar.YEAR, 1900);
+        Date future = c.getTime();
+        return future;
+    }
+
+
 }

@@ -18,88 +18,17 @@ public class MainActivity extends AppCompatActivity {
     ActivityMainBinding binding;
 
     Button firstButton,toDateBut,toScrollBut, toFrameBut, toGridBut, toNotiBut, toCowListBut;
-    TextView welcome, changeText;
+    TextView welcome;
 
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
-        replaceFragment(new HomeFragment());
         binding =ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
+        replaceFragment(new HomeFragment());
 
-        welcome = (TextView) findViewById(R.id.textView);
-
-
-        firstButton = (Button) findViewById(R.id.BUTTON);
-        toDateBut = (Button) findViewById(R.id.nextLayout);
-        toScrollBut = (Button) findViewById(R.id.toScrollButton);
-        toFrameBut = (Button) findViewById(R.id.toFrameButton);
-        toGridBut = (Button) findViewById(R.id.toGridButton);
-        toNotiBut = (Button) findViewById(R.id.toNotiButton);
-        toCowListBut = (Button) findViewById(R.id.toCowListButton);
-
-
-        firstButton.setOnClickListener(new View.OnClickListener(){
-            @Override
-                    public void onClick (View view){
-                if(!welcome.getText().toString().equals("Button was clicked"))
-                welcome.setText("Button was clicked");
-                else{welcome.setText("Hello Barty");
-                }
-
-            }
-        });
-
-        toDateBut.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick (View view){
-                Intent newIntent = new Intent(MainActivity.this, datePage.class);
-                startActivity(newIntent);
-            }
-        });
-
-        toScrollBut.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick (View view){
-                Intent newIntent = new Intent(MainActivity.this, scrollPage.class);
-                startActivity(newIntent);
-            }
-        });
-
-        toFrameBut.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick (View view){
-                Intent newIntent = new Intent(MainActivity.this, framePage.class);
-                startActivity(newIntent);
-            }
-        });
-
-        toGridBut.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick (View view){
-                Intent newIntent = new Intent(MainActivity.this, actualGridPage.class);
-                startActivity(newIntent);
-            }
-        });
-
-        toNotiBut.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick (View view){
-                Intent newIntent = new Intent(MainActivity.this, notiPage.class);
-                startActivity(newIntent);
-            }
-        });
-
-        toCowListBut.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick (View view){
-                Intent newIntent = new Intent(MainActivity.this, CowListActivity.class);
-                startActivity(newIntent);
-            }
-        });
 
         binding.bottomNavigationView.setOnItemSelectedListener(item -> {
             switch (item.getItemId()) {
